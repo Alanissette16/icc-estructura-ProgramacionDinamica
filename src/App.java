@@ -1,10 +1,13 @@
 import java.util.HashMap;
 import java.util.Map;
 
+import Ejercicios.contorllers.Laberinto;
+
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Programación Dinámica");
 
+        /* 
         float startime, endtime = 0;
         startime = System.nanoTime();
         System.out.println(fibonacci(40));
@@ -23,10 +26,11 @@ public class App {
         endtime = System.nanoTime();
         System.out.println("Time taken: " + (endtime - startime) + " ns");
         System.out.println(String.format("Time taken: %.9f segundos" ,(endtime - startime)/1000000000)+ " s");
-        
+        */
 
-        /// Ejericio 1
-        // runEjercicio();
+        //Ejericio 1
+        runEjercicio();
+
 
     }
 
@@ -75,12 +79,16 @@ public class App {
 
     public static void runEjercicio() {
 
-        // boolean[][] grid = {
-        // { true, true, true, true },
-        // { false, false, false, true },
-        // { true, true, false, true },
-        // { true, true, false, true }
-        // };
+        Laberinto laberinto = new Laberinto();
 
+        boolean[][] grid = {
+        { true, true, true, true },
+        { false, false, false, true },
+        { true, true, false, true },
+        { true, true, false, true }
+        };
+        
+        System.out.println(laberinto.getPath(grid));
     }
+    
 }

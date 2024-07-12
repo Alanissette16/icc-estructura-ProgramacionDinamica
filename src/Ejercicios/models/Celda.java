@@ -36,4 +36,8 @@ public class Celda {
             return false; // Comparamos las columnas
         return true; // Si todas las comparaciones son iguales, los objetos son iguales
     }
+    @Override
+    public String toString() {
+        return "(" + row + "," + col + ")";
+    }  
 }
